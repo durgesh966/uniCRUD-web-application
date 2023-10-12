@@ -1,0 +1,29 @@
+{{> navbar}}
+<h1>-</h1>
+<h5 class="mt-4 border rounded shadow p-4 text-center form-group mb-2 bg-light text-dark">Search Results</h5>
+<h6>Showing results for: {{query}}</h6>
+
+<div class="row forma border rounded shadow p-4 text-center form-group mb-2 bg-light text-dark" style="overflow: auto; height: 70vh;">
+    {{#each users}}
+    <div class="col-md-3">
+        <div class="card border rounded shadow p-4 text-center form-group mb-2 bg-light text-dark">
+            <img src="/uploads/{{image}}" class="card-img-top" alt="{{name}}'s Image"
+                style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text">{{email}}</p>
+            </div>
+            <div class="card-footer">
+                <a href="/users/{{_id}}" class="btn btn-outline-danger btn-sm">View Full Profile</a>
+                <a href="/update/{{_id}}" class="btn btn-outline-danger btn-sm">Update</a>
+                <form action="/delete/{{_id}}" method="POST" class="d-inline">
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+</div>
+<script src="/js/delete.js"></script>

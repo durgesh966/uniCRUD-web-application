@@ -1,0 +1,117 @@
+{{> navbar}}
+<h1>-</h1>
+<div class="container mt-2">
+  <h3 class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">Update user</h3>
+  <form id="updateUserForm" class="forma" enctype="multipart/form-data" method="POST" action="/update/{{user._id}}">
+    <div class="row">
+      <div class="col-md-6">
+        {{!-- Name --}}
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="{{ user.name }}"
+            required>
+        </div>
+        {{!-- email --}}
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+            value="{{user.email}}" required>
+        </div>
+        {{!-- How did you hear about this? : --}}
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label class="mr-2">How did you hear about this? : </label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="linkedin" name="how_heard" value="linkedin" {{#ifCond
+              user.how_heard '===' 'linkedin' }}checked{{/ifCond}}>
+            <label class="form-check-label" for="linkedin">LinkedIn</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="friends" name="how_heard" value="friends" {{#ifCond
+              user.how_heard '===' 'friends' }}checked{{/ifCond}}>
+            <label class="form-check-label" for="friends">Friends</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="jobportal" name="how_heard" value="jobportal" {{#ifCond
+              user.how_heard '===' 'jobportal' }}checked{{/ifCond}}>
+            <label class="form-check-label" for="jobportal">Job Portal</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="others" name="how_heard" value="others" {{#ifCond
+              user.how_heard '===' 'others' }}checked{{/ifCond}}>
+            <label class="form-check-label" for="others">Others</label>
+          </div>
+        </div>
+        {{!-- city and states --}}
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label for="city">City:</label>
+          <select class="form-control" id="city" name="city">
+            <option value="Mumbai" {{#ifCond user.city '===' 'Mumbai' }}selected{{/ifCond}}>Mumbai</option>
+            <option value="Pune" {{#ifCond user.city '===' 'Pune' }}selected{{/ifCond}}>Pune</option>
+            <option value="Ahmedabad" {{#ifCond user.city '===' 'Ahmedabad' }}selected{{/ifCond}}>Ahmedabad</option>
+            <option value="Bhopal" {{#ifCond user.city '===' 'Bhopal' }}selected{{/ifCond}}>Bhopal</option>
+            <option value="Khandwa" {{#ifCond user.city '===' 'Khandwa' }}selected{{/ifCond}}>Khandwa</option>
+          </select>
+        </div>
+
+
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label for="state">State:</label>
+          <input type="text" class="form-control" id="state" name="state" list="states" value="{{user.state}}">
+          <datalist id="states">
+            <option name="state" value="Gujarat">
+            <option name="state" value="Maharashtra">
+            <option name="state" value="Karnataka">
+            <option name="state" value="Madhya Pradesh">
+          </datalist>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label class="mr-2">Gender : </label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male" required {{#ifCond
+              user.gender '===' 'male' }}checked{{/ifCond}}>
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female" required {{#ifCond
+              user.gender '===' 'female' }}checked{{/ifCond}}>
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="other" value="other" required {{#ifCond
+              user.gender '===' 'other' }}checked{{/ifCond}}>
+            <label class="form-check-label" for="other">Other</label>
+          </div>
+        </div>
+        {{!-- age --}}
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age"
+            value="{{user.age}}" required>
+        </div>
+        {{!-- phone --}}
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label for="phone">Phone</label>
+          <input type="number" pattern="[0-9]*" class="form-control" id="phone" name="phone"
+            placeholder="Enter phone number" value="{{user.phone}}" required>
+        </div>
+        {{!-- addresss --}}
+        <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+          <label for="address">Address</label>
+          <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter current address"
+            required>{{user.address}}</textarea>
+        </div>
+      </div>
+    </div>
+    <div class="form-group1 text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+      <label for="image">Profile Image</label>
+      <input type="file" class="form-control-file" id="image" name="image">
+    </div>
+    <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+    <button type="submit" class="btn btn-outline-danger mt-4">Update User</button>
+    </div>
+  </form>
+</div>
+</div>

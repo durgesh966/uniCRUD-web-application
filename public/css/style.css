@@ -1,0 +1,277 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.gradient-form{
+  height: 70vh;
+  background-color: #dedfde;
+}
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  }
+  
+  @media (min-width: 768px) {
+  .gradient-form {
+  height: 100vh !important;
+  }
+  }
+  @media (min-width: 769px) {
+  .gradient-custom-2 {
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  }
+  }
+    /*--------------------------------------------------------------
+    # Hero Section
+    --------------------------------------------------------------*/
+    #hero {
+      width: 100%;
+      height: 100vh;
+      background: url(../img/hero-bg.jpg) top center;
+      background-size: cover;
+      position: relative;
+    }
+    
+    @media (min-width: 1024px) {
+      #hero {
+        background-attachment: fixed;
+      }
+    }
+    
+    #hero:before {
+      content: "";
+      background: rgba(16, 16, 16, 0.6);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    
+    #hero .hero-container {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      text-align: center;
+    }
+    
+    #hero h1 {
+      margin: 30px 0 10px 0;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+    
+    #hero h2 {
+      color: #eee;
+      margin-bottom: 50px;
+      font-size: 24px;
+    }
+    
+    @media (max-width: 768px) {
+      #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+    }
+    
+    #hero .btn-get-started {
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 8px 28px;
+      border-radius: 50px;
+      transition: 0.5s;
+      margin: 10px;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    
+    #hero .btn-get-started:hover {
+      background: #2dc997;
+      border: 2px solid #2dc997;
+    }
+/* navbar */
+.navbar{
+background-attachment: fixed;
+}
+.form-white.input-group>.form-control:focus {
+border-color: #fff;
+box-shadow: inset 0 0 0 10px #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+color: rgba(255, 255, 255, 0.75);
+}
+/* end navbar */
+/* Hero Section - Home Page
+------------------------------*/
+.hero {
+--default-color: #ffffff;
+--default-color-rgb: 255, 255, 255;
+--background-color: #000000;
+--background-color-rgb: 0, 0, 0;
+width: 100%;
+min-height: 100vh;
+position: relative;
+padding: 160px 0 80px 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.hero img {
+position: absolute;
+inset: 0;
+display: block;
+width: 100%;
+height: 100%;
+-o-object-fit: cover;
+object-fit: cover;
+z-index: 1;
+}
+
+.hero:before {
+content: "";
+background: rgba(var(--background-color-rgb), 0.5);
+position: absolute;
+inset: 0;
+z-index: 2;
+}
+
+.hero .container {
+position: relative;
+z-index: 3;
+}
+
+.hero h2 {
+color: var(--contrast-color);
+margin: 0;
+font-size: 44px;
+font-weight: 700;
+}
+
+.hero p {
+color: rgba(var(--default-color-rgb), 0.8);
+margin: 5px 0 0 0;
+font-size: 20px;
+}
+
+.hero .sign-up-form {
+margin-top: 20px;
+padding: 10px;
+border-radius: 7px;
+background: #fff;
+box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hero .sign-up-form .form-control {
+border: none;
+}
+
+.hero .sign-up-form .form-control:active,
+.hero .sign-up-form .form-control:focus {
+outline: none;
+box-shadow: none;
+}
+
+.hero .sign-up-form input[type=submit] {
+box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+background-color: var(--primary-color);
+border-color: var(--primary-color);
+padding: 8px 20px 10px 20px;
+border-radius: 7px;
+color: var(--contrast-color);
+}
+
+.hero .sign-up-form input[type=submit]:hover {
+background-color: rgba(var(--primary-color-rgb), 0.9);
+}
+
+@media (max-width: 768px) {
+.hero h2 {
+  font-size: 32px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+}
+.addusers{
+background-color: rgba(255, 252, 252, 0.041);
+}
+
+/* Add your CSS styles for the popup here */
+.hidden {
+display: none;
+}
+
+#popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+padding: 20px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.error-container {
+margin-top: 50px;
+text-align: center;
+}
+.error-img {
+  display: block;
+  margin: 0 auto;
+  width: 75vw;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.form-check-input{
+  cursor: pointer;
+}
+
+.form-group1 {
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

@@ -1,0 +1,73 @@
+{{> navbar}}
+<h5 class="mt-4 border rounded shadow p-4 text-center form-group mb-2 bg-light text-dark">{{user.name}} Full Info.</h5>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            {{!-- Name --}}
+            {{#if user.image}}
+            <div class="border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <div class="card" style="max-width: 300px;">
+                    <img src="/uploads/{{user.image}}" alt="{{user.name}}'s Image" class="card-img-top">
+                </div>
+            </div>
+            {{/if}}
+        </div>
+
+        <div class="col-md-4">
+            {{!-- Name --}}
+            <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label class="mb-1 ml-4" for="name">Name</label>
+                <h6 id="name">{{user.name}}</h6>
+            </div>
+            {{!-- email --}}
+            <div class=" text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label class="mb-1" for="email">Email</label>
+                <h6 id="name">{{user.email}}</h6>
+            </div>
+            {{!-- How did you hear about this? : --}}
+            <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label for="here" class="mb-2">How did you hear about this ?</label>
+                <h6 id="here">{{user.how_heard}}</h6>
+            </div>
+            {{!-- city and states --}}
+            <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label class="mb-2" for="city">City</label>
+                <h6 id="city">{{user.city}}</h6>
+            </div>
+            <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label class="mb-2" for="state">State</label>
+                <h6 id="city">{{user.state}}</h6>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label class="mb-1" for="gender">Gender</label>
+                <h6 id="gender">{{user.gender}}</h6>
+            </div>
+            {{!-- age --}}
+            <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label class="mb-1" for="age">Age</label>
+                <h6 id="age">{{user.age}}</h6>
+            </div>
+            {{!-- phone --}}
+            <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label class="mb-1" for="phone">Phone</label>
+                <h6 id="phone">{{user.phone}}</h6>
+            </div>
+            {{!-- addresss --}}
+            <div class="text-center border rounded shadow p-1 form-group mb-2 bg-light text-dark">
+                <label class="mb-1" for="address">Address</label>
+                <h6 id="address">{{user.address}}</h6>
+            </div>
+        </div>
+    </div>
+    <div class="mt-2 border rounded shadow p-3 text-center form-group mb-2 bg-light text-dark">
+        <a href="/dashboard" class="btn btn-outline-danger">Back to Home</a>
+        <a href="/update/{{user._id}}" class="btn btn-outline-danger ml-3">Update User Info</a>
+        <form action="/delete/{{user._id}}" method="POST" class="d-inline">
+            <button type="submit" class="btn btn-outline-danger ml-3">Delete</button>
+        </form>
+    </div>
+</div>
+</div>

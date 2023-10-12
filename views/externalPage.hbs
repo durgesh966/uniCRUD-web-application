@@ -1,0 +1,26 @@
+{{> navbar}}
+<h1>-</h1>
+<div class="container mt-4">
+    <h5 class="border rounded shadow p-4 text-center form-group bg-light text-dark">All User Data</h5>
+    <div class="row forma mt-4 border rounded shadow p-4 text-center form-group mb-2 bg-light text-dark"
+        style="overflow: auto; height: 75vh;">
+        {{#if users.length}}
+        {{#each users}}
+        <div class="col-md-4 ">
+            <div class="card border rounded shadow p-4 text-center form-group mb-2 bg-light text-dark">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <p class="card-text"><strong>Phone:</strong> {{phone}}</p>
+                    <p class="card-text"><strong>Email:</strong> {{email}}</p>
+                    <!-- Add more card content for other fields -->
+                    <a href="/users/{{_id}}" class="btn btn-outline-danger">View Full Profile</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{else}}
+<!-- User not found image or message -->
+<img class="error-img" src="./img/not-found.png" alt="User Not Found">
+{{/if}}

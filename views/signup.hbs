@@ -1,0 +1,81 @@
+<section class="gradient-form">
+  <!-- Container for the signup form -->
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <!-- Left column for the signup form -->
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+                <!-- Logo and signup header -->
+                <div class="text-center">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="pb-1">Signup for The Durgesh Team</h4>
+                </div>
+                <!-- Signup form -->
+                <form id="myForm" action="/signup" method="post">
+                  <p>Please create a new account</p>
+
+                  <!-- Full Name input -->
+                  <div class="form-outline mb-1">
+                    <input type="text" id="form2Example11" class="form-control" name="username" placeholder="Full Name"
+                      required />
+                    <label class="form-label" for="form2Example11">Full Name</label>
+                  </div>
+
+                  <!-- Email input -->
+                  <div class="form-outline mb-1">
+                    <input type="email" id="form2Example12" class="form-control" name="email"
+                      placeholder="Email address" required />
+                    <label class="form-label" for="form2Example12">Email</label>
+                  </div>
+                  {{!-- phone_number --}}
+                  <div class="form-outline mb-1">
+                    <input type="number" id="form3Example12" class="form-control" name="phone"
+                      placeholder="Phone Number" required />
+                    <label class="form-label" for="form3Example12">Phone</label>
+                  </div>
+
+                  <!-- Password input with a Show button -->
+                  <div class="form-outline mb-1">
+                    <input type="password" id="passInput" class="form-control" name="password"
+                      placeholder="Password" required />
+                    <label class="form-label" for="form2Example22">Password</label>
+                    <button class="mt-1 password-button btn btn-outline-secondary" type="button"
+                      id="PassButton">Show</button>
+                  </div>
+
+                  <!-- Signup button -->
+                  <div class="text-center pt-1 mb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" id="signup-button"
+                      type="submit">Sign up</button>
+                  </div>
+                </form>
+                <!-- Already have an account link -->
+                <div class="d-flex align-items-center justify-content-center">
+                  <p class="mb-0 me-2">Already have an account?</p>
+                  <a href="/login" class="btn btn-outline-danger">Log in</a>
+                </div>
+              </div>
+            </div>
+            <!-- Right column with additional information -->
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">Join The Durgesh Team Today!</h4>
+                <p class="mediam mb-0">I'd be happy to help you compose a message, but I'll need more context. Could you
+                  please provide more details about the message you'd like to send, including the purpose, recipient,
+                  and any specific information or tone you want to convey? This will help me generate a more tailored
+                  message for you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup for displaying messages (hidden by default) -->
+{{> popup}}

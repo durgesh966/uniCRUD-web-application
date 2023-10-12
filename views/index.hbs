@@ -1,0 +1,31 @@
+<section id="hero" class="hero">
+    <img src="https://images.pexels.com/photos/696680/pexels-photo-696680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="" data-aos="fade-in">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Website</h2>
+                {{!-- <p data-aos="fade-up" data-aos-delay="200">Certainly, here's a welcoming paragraph for your UniCRUD (User Management System) website:</p> --}}
+                <p data-aos="fade-up" data-aos-delay="300">
+                    "Welcome to UniCRUD, your gateway to seamless user management! We're excited to have you here as we embark on a journey to simplify user administration and enhance your online experiences. UniCRUD is your all-in-one solution for managing users, streamlining access control, and ensuring security with ease. Whether you're an admin, developer, or user, you'll find valuable tools and resources tailored to your needs. Dive in, explore our user-friendly interface, and take control of your user management like never before. Thank you for choosing UniCRUD to simplify your user management needs!"
+                </p>
+            </div>
+            <div class="col-lg-3 mt-5">
+                <h4 class="text-white">User</h4>
+                <p class="mb-2">Don't have an account?</p>
+                <a href="/signup" type="submit" class="btn btn-outline-danger" onclick="newUser()">Create new</a>
+                <p class="mt-2 mb-2">Already have an account?</p>
+                <a href="/login" class="btn btn-outline-danger">Log in</a>
+            </div>
+            <div class="col-lg-3 mt-5">
+                <h4 class="text-white">Admin</h4>
+                <p class="mb-2">Don't have an account?</p>
+                <button type="submit" class="btn btn-outline-danger" onclick="newUser()">Create new</button>
+                <p class="mt-2 mb-2">Already have an account?</p>
+                <a href="#" class="btn btn-outline-danger">Log in</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> popup}}

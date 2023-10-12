@@ -1,0 +1,21 @@
+{{> navbar}} <!-- Include the navbar (assuming it's a partial) -->
+
+</section> <!-- Closing tag for the previous section (if any) -->
+
+<section id="hero" class="hero">
+    <img src="https://images.pexels.com/photos/696680/pexels-photo-696680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="" data-aos="fade-in">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <!-- Greeting and user's name -->
+                <h2>Welcome to Dashboard</h2>
+                <h1>Hello, <span>{{ user.username }}</span>....!</h1>
+                <p>Phone : <span>{{ user.phone }}</span></p>
+                <p>Email : <span>{{ user.email }}</span></p>
+                <!-- Dashboard heading -->
+            </div>
+        </div>
+    </div>
+</section> <!-- Closing tag for the hero section -->
+  {{> popup}}

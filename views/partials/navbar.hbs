@@ -1,0 +1,65 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-user fa-2x mx-3 ps-1"></i>
+    </a>
+
+    <!-- Toggle button for mobile view -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-user"></i>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Search form -->
+      <form class="me-3" action="/search-results" method="GET">
+        <div class="form-white input-group" style="width: 450px;">
+          <label for="query" class="sr-only">Search Query:</label>
+          <input type="text" class="form-control rounded me-2 my-1" name="query"
+            placeholder="Search by name or number" required />
+          <button type="submit" class="btn btn-info rounded btn-sm">Search</button>
+        </div>
+      </form>
+
+      <!-- Navigation links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/addUser">Add New User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/external-page">See All user</a>
+        </li>
+      </ul>
+
+      <!-- User profile dropdown -->
+      <ul class="navbar-nav d-flex flex-row ms-auto me-3">
+        <li class="nav-item me-3 me-lg-0 dropdown">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="navbarDropdown1"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="https://cdn.vectorstock.com/i/1000x1000/51/45/brunette-young-man-profile-avatar-beautiful-guy-vector-32145145.webp"
+                class="rounded-circle" height="22" alt="User Avatar" loading="lazy" />
+              {{ user.username }}
+            </button>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown1">
+              <a class="btn btn-danger btn-sm dropdown-item" id="logout-link"
+                onclick="confirmLogout()">Logout</a>
+              <button class="btn btn-info btn-sm dropdown-item" id="logout-link" onclick="addNewUser()">Create New
+                Account</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="popup" class="hidden">
+    <p id="popup-message"></p>
+    <button id="closePopupBtn">Close</button>
+</div>

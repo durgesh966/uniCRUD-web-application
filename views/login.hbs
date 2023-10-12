@@ -1,0 +1,75 @@
+<section class="gradient-form">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+                <div class="text-center">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">We Are The Durgesh Team Member</h4>
+                </div>
+
+                <!-- Login Form -->
+                <form action="/login" method="post">
+                  <p>Please log in to your account</p>
+
+                  <!-- Username (Email or Phone Number) input -->
+                  <div class="form-outline mb-1">
+                    <input type="text" id="form2Example11" class="form-control" name="email"
+                      placeholder="Phone number or email address" required/>
+                    <label class="form-label" for="form2Example11">Username</label>
+                  </div>
+
+                  <!-- Password input with a Show button -->
+                  <div class="form-outline mb-1">
+                    <input type="password" id="passInput" name="password" class="form-control" required/>
+                    <label class="form-label" for="form2Example22">Password</label>
+                    <button class="mt-1 password-button btn btn-outline-secondary" type="button"
+                      id="PassButton">Show</button>
+                  </div>
+
+                  <div class="text-center pt-1 mb-2 mt-3 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
+                      in</button>
+                    <a class="text-muted" href="/signup">Forgot password?</a>
+                  </div>
+                </form>
+
+                <div class="d-flex align-items-center justify-content-center pb-4">
+                  <p class="mb-0 me-2">Don't have an account?</p>
+                  <a href="/signup" class="btn btn-outline-danger">Create new</a>
+                </div>
+              </div>
+            </div>
+            <!-- Right column with additional information -->
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">We are more than just a company</h4>
+                <p class="mediam mb-0">Hello Team,
+
+I hope this message finds you all well. As members of the Durgesh team, we've accomplished some great things together, and I want to take a moment to appreciate each and every one of you for your dedication and hard work.
+
+In our journey together, we've faced challenges and celebrated successes, and I believe that our teamwork has been the key to our achievements. As we continue to work towards our goals, let's remember the importance of collaboration, communication, and supporting one another.
+
+Our collective efforts have brought us this far, and I have no doubt that we have the potential to achieve even greater heights in the future. So, let's stay focused, stay motivated, and keep pushing towards our objectives.
+
+If anyone has any ideas, concerns, or suggestions, please don't hesitate to share them. Our team's success depends on open and constructive communication.
+
+Thank you for being part of the Durgesh team and for all that you do. Together, we are unstoppable!
+
+Warm regards,
+Durgesh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup for displaying messages (hidden by default) -->
+{{> popup}}
